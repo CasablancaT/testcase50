@@ -121,15 +121,91 @@ public class SelfSelenium {
 
     public static void searchProductThree() throws InterruptedException {
         setUp(url);
+        // search bar typpe in football
         driver.findElement(By.xpath("//*[@id=\"twotabsearchtextbox\"]")).sendKeys("Football");
+        //click the search button
         driver.findElement(By.cssSelector("#nav-search > form > div.nav-right > div > input")).click();
+        // wit for 1 second
         waitFor(1000);
+        // look for wilson football then click
         driver.findElement(By.xpath("//*[contains(text(),'Wilson NFL Super Grip Football')]")).click();
+        // add to crton
         driver.findElement(By.xpath("//*[@id=\"add-to-cart-button\"]")).click();
+        //click to pay
         driver.findElement(By.id("hlb-ptc-btn-native")).click();
+        //close browser
         closeBrowser();
     }
 
+    public static void searchProductTwelve() throws InterruptedException {
+        setUp(url);
+
+        // sign in
+        driver.findElement(By.cssSelector("#nav-link-accountList > span.nav-line-2")).click();
+        // click sign up
+        driver.findElement(By.xpath("//*[@id=\"createAccountSubmit\"]")).click();
+        //enter first name
+        driver.findElement(By.cssSelector("#ap_customer_name")).sendKeys("Angel");
+        // email
+        driver.findElement(By.xpath("//*[@id=\"ap_email\"]")).sendKeys("Angel@MYOB.COM");
+        //password
+        driver.findElement(By.cssSelector("#ap_password")).sendKeys("FuckBezos20");
+        //retner passwork
+        driver.findElement(By.xpath("//*[@id=\"ap_password_check\"]")).sendKeys("FuckBezos20");
+        //submit
+        driver.findElement(By.cssSelector("#continue")).click();
+
+
+        closeBrowser();
+
+    }
+
+
+    public static void searchProductFourteen() throws InterruptedException {
+        setUp(url);
+        //click coupons
+        driver.findElement(By.cssSelector("#nav-xshop > a:nth-child(12)")).click();
+        // click popular coupons
+        driver.findElement(By.cssSelector("#a-page > div.a-fixed-left-flipped-grid.s-padding-left-small.s-padding-right-small.s-span-page.a-spacing-top-small > div > div.a-fixed-left-grid-col.a-col-left > div > div.a-section.a-spacing-base > div.left_nav.browseBox > ul:nth-child(5) > li:nth-child(1) > a")).click();
+        // Click more coupons
+        driver.findElement(By.xpath("//*[@id=\"coupon_grid_a0f7d603-d75e-35d3-9443-af33c2e5417f_4ee302ef-ec95-4ac1-8595-0008d8a56a3b\"]/div[6]")).click();
+        // click to back on top
+        driver.findElement(By.cssSelector("#navBackToTop > div > span")).click();
+        closeBrowser();
+
+
+    }
+    public static void searchProductNYJ() throws InterruptedException {
+        setUp(urlNYJ);
+        //select news
+        driver.findElement(By.xpath("/html/body/div[4]/header/div/nav[1]/ul/li[1]")).click();
+        //click draft
+        driver.findElement(By.xpath("/html/body/div[4]/header/div/nav[3]/ul/li[2]/a/span")).click();
+        //  click free gency
+        driver.findElement(By.xpath("/html/body/div[4]/header/div/nav[3]/ul/li[3]/a/span")).click();
+        //click featured series
+        driver.findElement(By.xpath("/html/body/div[4]/header/div/nav[3]/ul/li[4]/a/span")).click();
+        //click transactions
+        driver.findElement(By.xpath("/html/body/div[4]/header/div/nav[3]/ul/li[4]/a/span")).click();
+
+
+        closeBrowser();
+    }
+
+    public static void searchProductNine() throws InterruptedException {
+        setUp(url);
+        // select location addres
+        driver.findElement(By.xpath("//*[@id=\"nav-global-location-slot\"]/span/a")).click();
+        // add address
+        driver.findElement(By.xpath("//*[@id=\"GLUXZipUpdateInput\"]")).sendKeys("NEW YORK CITY");
+        // select done
+        driver.findElement(By.xpath("//*[@id=\"a-popover-3\"]/div/div[2]/span/span/span/button")).click();
+
+        closeBrowser();
+
+        System.out.println("Nine worked");
+
+    }
     public static void searchProductFour() throws InterruptedException {
         setUp(urlOne);
         driver.findElement(By.cssSelector("body > div.d3-l-wrap > header > div > nav.d3-o-nav--primary > ul > li:nth-child(1) > a > span")).click();
@@ -176,20 +252,7 @@ public class SelfSelenium {
         closeBrowser();
     }
 
-    public static void searchProductNine() throws InterruptedException {
-        setUp(url);
-        // select location addres
-        driver.findElement(By.xpath("//*[@id=\"nav-global-location-slot\"]/span/a")).click();
-        // add address
-        driver.findElement(By.xpath("//*[@id=\"GLUXZipUpdateInput\"]")).sendKeys("NEW YORK CITY");
-        // select done
-        driver.findElement(By.xpath("//*[@id=\"a-popover-3\"]/div/div[2]/span/span/span/button")).click();
 
-        closeBrowser();
-
-        System.out.println("Nine worked");
-
-    }
 
     public static void searchProductTen() throws InterruptedException {
         setUp(url);
@@ -204,28 +267,6 @@ public class SelfSelenium {
 
 
 
-    public static void searchProductTwelve() throws InterruptedException {
-        setUp(url);
-
-        // sign in
-        driver.findElement(By.cssSelector("#nav-link-accountList > span.nav-line-2")).click();
-        // click sign up
-        driver.findElement(By.xpath("//*[@id=\"createAccountSubmit\"]")).click();
-        //enter first name
-        driver.findElement(By.cssSelector("#ap_customer_name")).sendKeys("Angel");
-        // email
-        driver.findElement(By.xpath("//*[@id=\"ap_email\"]")).sendKeys("Angel@MYOB.COM");
-        //password
-        driver.findElement(By.cssSelector("#ap_password")).sendKeys("FuckBezos20");
-        //retner passwork
-        driver.findElement(By.xpath("//*[@id=\"ap_password_check\"]")).sendKeys("FuckBezos20");
-        //submit
-        driver.findElement(By.cssSelector("#continue")).click();
-
-
-        closeBrowser();
-
-    }
 
     public static void searchProductThirteen() throws InterruptedException {
         setUp(url);
@@ -240,38 +281,6 @@ public class SelfSelenium {
 
     }
 
-    public static void searchProductFourteen() throws InterruptedException {
-        setUp(url);
-        //click coupons
-        driver.findElement(By.cssSelector("#nav-xshop > a:nth-child(12)")).click();
-        // click popular coupons
-        driver.findElement(By.cssSelector("#a-page > div.a-fixed-left-flipped-grid.s-padding-left-small.s-padding-right-small.s-span-page.a-spacing-top-small > div > div.a-fixed-left-grid-col.a-col-left > div > div.a-section.a-spacing-base > div.left_nav.browseBox > ul:nth-child(5) > li:nth-child(1) > a")).click();
-        // Click more coupons
-        driver.findElement(By.xpath("//*[@id=\"coupon_grid_a0f7d603-d75e-35d3-9443-af33c2e5417f_4ee302ef-ec95-4ac1-8595-0008d8a56a3b\"]/div[6]")).click();
-        // click to back on top
-        driver.findElement(By.cssSelector("#navBackToTop > div > span")).click();
-        closeBrowser();
-
-
-    }
-
-    public static void searchProductNYJ() throws InterruptedException {
-        setUp(urlNYJ);
-        //select news
-        driver.findElement(By.xpath("/html/body/div[4]/header/div/nav[1]/ul/li[1]")).click();
-        //click draft
-        driver.findElement(By.xpath("/html/body/div[4]/header/div/nav[3]/ul/li[2]/a/span")).click();
-        //  click free gency
-        driver.findElement(By.xpath("/html/body/div[4]/header/div/nav[3]/ul/li[3]/a/span")).click();
-        //click featured series
-        driver.findElement(By.xpath("/html/body/div[4]/header/div/nav[3]/ul/li[4]/a/span")).click();
-        //click transactions
-        driver.findElement(By.xpath("/html/body/div[4]/header/div/nav[3]/ul/li[4]/a/span")).click();
-
-
-        closeBrowser();
-
-    }
 
 
 
